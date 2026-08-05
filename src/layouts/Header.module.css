@@ -1,0 +1,134 @@
+.header {
+    width: 100%;
+    position: fixed;
+    background: linear-gradient(135deg, #FFF5F8 0%, #FFD9E8 50%, #FFC1D6 100%);
+    z-index: 1000;
+    min-height:80px;
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: clamp(35px, 5vw, 70px);
+}
+
+.menuList {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menuList li {
+    list-style: none;
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+
+.menuList li a {
+    text-decoration: none;
+    color: var(--secondary);
+    display: inline-block;
+    font-size: clamp(20px, 1.6vw, 25px);
+    position: relative;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.menuList li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #ec1e1ef8;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.menuList li a:hover {
+  transform: scale(1.1);
+  color: red;
+}
+
+.menuList li a:hover::after {
+  transform: scaleX(1);
+}
+
+.menuList li a.activeLink,
+.menuList li a.activeLink:hover {
+  color: red;
+}
+
+.menuList li a.activeLink::after,
+.menuList li a.activeLink:hover::after {
+  transform: scaleX(1);
+}
+
+
+.logo img {
+    width: clamp(110px, 8vw, 150px);
+}
+
+
+@media (max-width: 1300px) {
+    .menuList {
+        gap: 35px;
+    }
+
+    .menuList li a:hover {
+        transform: scale(1.08);
+    }
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background: transparent;
+    color: var(--secondary);
+}
+
+
+@media (max-width: 760px) {
+    .hamburger {
+        display: block;
+        z-index: 1002;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .menuList {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background: #FFD9E8;
+        padding: 25px 0;
+        clip-path: inset(0 0 0 100%);
+        transition: clip-path .35s ease;
+        z-index: 1001;
+    }
+
+    .menuOpen {
+        clip-path: inset(0);
+    }
+
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 245, 248, 0.586);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+}
