@@ -1,0 +1,109 @@
+.heroContent {
+    position: relative;
+    width: 100%;
+    height: clamp(450px, 70vh, 750px);
+    overflow: hidden;
+}
+
+.heroContent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ee7cc426;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+}
+
+.studioName {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(.75rem, 1.5vw, 1.1rem);
+    letter-spacing: clamp(2px, .5vw, 5px);
+    font-weight: 500;
+    color: #ffeaf2;
+    text-shadow: 2px 5px 8px #6c0a55;
+}
+
+.studioName span {
+    font-size: .9em;
+    opacity: .8;
+}
+
+.overlay h1 {
+    line-height: 1.7;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    color: #fbdae5;
+    text-shadow: 3px 5px 10px #6c0a55;
+    margin-top: clamp(10px, 2vw, 20px);
+}
+
+.overlay p {
+    font-size: clamp(.7rem, 2vw, 1.5rem);
+    color: #fbdae5;
+    margin-top: clamp(10px, 2vw, 20px);
+}
+
+.heroButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(8px, 2vw, 20px);
+    margin-top: clamp(15px, 3vw, 30px);
+}
+
+.reserveBut,
+.serviceBut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: clamp(.6rem, 1.5vw, 1.3rem);
+    height: clamp(44px, 6vw, 70px);
+    border-radius: 50px;
+    font-weight: bold;
+    padding-inline: clamp(11px, 2vw, 20px);
+    border: 1px solid #cb66a899;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    background: linear-gradient(135deg,
+            #bd648ad5,
+            #cd7a97);
+    box-shadow: 2px 8px 20px #c24c7fe6;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+.reserveBut {
+    gap: 7px;
+}
+
+.reserveBut svg {
+    width: clamp(16px, 2vw, 23px);
+}
+
+.reserveBut:hover,
+.serviceBut:hover {
+    transform: translateY(-3px);
+    background: #ee97bda6;
+    box-shadow: 0 12px 25px #78234866;
+}
+
+@media (max-width: 600px) {
+    .overlay p {
+        margin-top: 5px;
+    }
+}
