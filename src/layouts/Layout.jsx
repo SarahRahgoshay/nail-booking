@@ -8,8 +8,9 @@ const Layout = ({children}) => {
     return (
         <>
             <Header />
+            <main className="padding-top">
              {children}
-             <div className={Styles.footerSpace}></div>
+            </main>
             <Footer /> 
         </>
     );

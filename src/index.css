@@ -18,4 +18,9 @@
 body {
   font-family: 'Tanha';
   direction: rtl;
+  background-color: #f39dcf;
+}
+
+.padding-top {
+  padding-top: 80px;
 }
