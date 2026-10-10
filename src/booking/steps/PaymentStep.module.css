@@ -1,0 +1,552 @@
+.paymentStep {
+    width: 100%;
+    padding: clamp(20px, 3vw, 32px);
+    margin: 0 auto;
+}
+
+.paymentCard {
+    width: 100%;
+    padding: clamp(20px, 4vw, 42px);
+    border-radius: 28px;
+}
+
+.paymentHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: clamp(10px, 1.5vw, 15px);
+    margin-bottom: clamp(24px, 3vw, 35px);
+}
+
+.paymentHeader h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(7px, 1vw, 10px);
+    color: #50152e;
+    font-size: clamp(18px, 4vw, 26px);
+    font-weight: 800;
+}
+
+.paymentHeader h2>svg {
+    width: clamp(42px, 5vw, 50px);
+    height: clamp(42px, 5vw, 50px);
+    padding: clamp(10px, 1.3vw, 13px);
+    background: #feddea;
+    border-radius: clamp(12px, 1.5vw, 16px);
+    color: #c94f7d;
+}
+
+.paymentHeader p {
+    color: #986b7c;
+    font-size: clamp(12px, 1.2vw, 15px);
+    line-height: 1.8;
+}
+
+.topSection {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(14px, 2vw, 20px);
+    margin-bottom: clamp(18px, 2.5vw, 22px);
+}
+
+.amountCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: clamp(220px, 20vw, 255px);
+    padding: clamp(18px, 2vw, 30px);
+    background: linear-gradient(145deg,
+            #fff8fa 0%,
+            #fff2f6 100%);
+
+    border: 1px solid #f1d8e2;
+    border-radius: clamp(20px, 2.5vw, 24px);
+    box-shadow: 0 10px 30px #71344c0f;
+}
+
+.amountCard span {
+    color: #987284;
+    font-size: clamp(11px, 2vw, 14px);
+    font-weight: 600;
+}
+
+.amountCard strong {
+    margin-top: clamp(8px, 1vw, 12px);
+    color: #54172f;
+    font-size: clamp(17px, 4vw, 33px);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.amountCard small {
+    margin-top: clamp(5px, 0.7vw, 7px);
+    color: #a97b8c;
+    font-size: clamp(8px, 1.5vw, 12px);
+}
+
+.securePayment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(5px, 0.7vw, 7px);
+    width: 100%;
+    margin-top: clamp(20px, 2.5vw, 26px);
+    padding: clamp(8px, 1vw, 10px) clamp(10px, 1.4vw, 14px);
+    background: #ffffffb3;
+    border: 1px solid #f2dce5;
+    border-radius: 10px;
+    color: #8f6878;
+    font-size: clamp(8px, 1.75vw, 12px);
+}
+
+.securePayment svg {
+    color: #5aa77f;
+    font-size: clamp(12px, 2vw, 17px);
+}
+
+.bookingSummary {
+    min-height: clamp(220px, 20vw, 255px);
+    padding: clamp(20px, 2.5vw, 26px);
+    background: #fffdfd;
+    border: 1px solid #eee0e5;
+    border-radius: clamp(20px, 2.5vw, 24px);
+    box-shadow: 0 8px 24px #71344c09;
+}
+
+.bookingSummary h3,
+.paymentDetails h3 {
+    margin: auto;
+    padding-bottom: clamp(8px, 2vw, 12px);
+    text-align: center;
+    color: #55162f;
+    font-size: clamp(13px, 4vw, 16px);
+    font-weight: 800;
+}
+
+.summaryRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(10px, 2vw, 20px);
+    min-height: clamp(52px, 5vw, 58px);
+    padding: clamp(11px, 2vw, 13px) 0;
+    border-bottom: 1px solid #f2e7eb;
+}
+
+.summaryRow:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.summaryRow>span {
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 0.8vw, 9px);
+    color: #9b7281;
+    font-size: clamp(11px, 3vw, 13px);
+    font-weight: 700;
+}
+
+.summaryRow>span svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(27px, 4.5vw, 35px);
+    height: clamp(27px, 4.5vw, 35px);
+    padding: clamp(7px, 0.8vw, 8px);
+    border-radius: clamp(8px, 1vw, 10px);
+    font-size: clamp(14px, 2vw, 17px);
+    background: #fff3f7;
+    border: 1px solid #f3dce6;
+    color: #c45a82;
+}
+
+.summaryRow strong {
+    color: #5a2038;
+    font-size: clamp(10px, 3vw, 13px);
+    font-weight: 700;
+}
+
+.paymentDetails {
+    background: #fffdfd;
+    border: 1px solid #eee0e5;
+    padding: clamp(22px, 3vw, 30px);
+    border-radius: clamp(20px, 2.5vw, 24px);
+    box-shadow: 0 8px 24px #71344c09;
+}
+
+.paymentDetails h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(6px, 0.8vw, 8px);
+    margin-bottom: 4px;
+}
+
+.paymentDetails h3>svg {
+    width: clamp(30px, 4vw, 34px);
+    height: clamp(30px, 4vw, 34px);
+    padding: clamp(7px, 0.8vw, 8px);
+    background: #fff2f6;
+    border: 1px solid #f2dbe4;
+    border-radius: clamp(8px, 1vw, 10px);
+    color: #c45a82;
+    font-size: clamp(13px, 2vw, 15px);
+}
+
+.priceRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(10px, 1.5vw, 15px);
+    min-height: clamp(52px, 5vw, 58px);
+    padding: clamp(8px, 1vw, 9px) clamp(10px, 5vw, 50px);
+    border-bottom: 1px solid #f3e6eb;
+}
+
+.priceRow span {
+    color: #956879;
+    font-size: clamp(11px, 2vw, 14px);
+}
+
+.priceRow strong {
+    color: #57162f;
+    font-size: clamp(11px, 2.5vw, 14px);
+}
+
+.finalAmount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(16px, 1.5vw, 20px);
+    margin-top: clamp(18px, 2vw, 22px);
+    padding: clamp(9px, 2.5vw, 16px) clamp(14px, 2vw, 20px);
+    background: linear-gradient(135deg, #fff1f5, #fce8ef);
+    border: 1px solid #f1d3de;
+    border-radius: clamp(12px, 1.5vw, 15px);
+}
+
+.finalAmount span {
+    color: #794b60;
+    font-size: clamp(10px, 2.5vw, 13px);
+    font-weight: 700;
+}
+
+.finalAmount strong {
+    color: #b83f6c;
+    font-size: clamp(13px, 3vw, 16px);
+    font-weight: 800;
+}
+
+.calculationInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(5px, 0.7vw, 7px);
+    margin-top: clamp(15px, 2vw, 18px);
+    color: #a17a89;
+    font-size: clamp(10px, 0.9vw, 12px);
+    line-height: 1.8;
+}
+
+.calculationInfo svg {
+    color: #bd6a88;
+    font-size: clamp(13px, 2vw, 17px);
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(10px, 2vw, 16px);
+}
+
+.backButton,
+.payButton {
+    min-width: 0;
+    min-height: clamp(36px, 5vw, 53px);
+    padding: clamp(7px, 2vw, 11px) clamp(7px, 2.5vw, 18px);
+    border-radius: clamp(11px, 1.5vw, 13px);
+    font-size: clamp(10px, 3vw, 14px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(7px, 1vw, 10px);
+    border: none;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.backButton {
+    background: #fff;
+    border: 1.5px solid #df8aaa;
+    color: #68213f;
+}
+
+.backButton:hover {
+    background: #fff8fa;
+    transform: translateY(-2px);
+}
+
+.payButton {
+    background: #c94f7d;
+    color: #ffffff;
+    box-shadow: 0 7px 18px #c94f7d38;
+}
+
+.payButton svg {
+    font-size: clamp(17px, 2vw, 20px);
+}
+
+.payButton:hover {
+    background: #b94270;
+    transform: translateY(-1px);
+    box-shadow: 0 9px 22px #c94f7d47;
+}
+
+.securityFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(8px, 1.5vw, 14px);
+    margin-top: clamp(24px, 3vw, 35px);
+}
+
+.securityLine {
+    width: min(80px, 12vw);
+    height: 1px;
+    background: #e9ccd8;
+}
+
+.securityText {
+    display: flex;
+    align-items: center;
+    gap: clamp(5px, 1vw, 8px);
+    color: #a06c80;
+    font-size: clamp(10px, 2vw, 13px);
+    white-space: nowrap;
+}
+
+.securityText svg {
+    color: #b76b87;
+    font-size: clamp(12px, 3vw, 18px);
+}
+
+
+/* status */
+.paymentSuccess {
+    width: min(100%, 500px);
+    min-height: clamp(440px, 65vw, 600px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: clamp(18px, 4vw, 35px);
+    margin: clamp(20px, 4vw, 50px) auto;
+    border: 1px solid #f3dce4;
+    border-radius: clamp(18px, 3vw, 24px);
+    background: #fcfafbb4;
+    box-sizing: border-box;
+}
+
+.successIcon {
+    width: clamp(58px, 10vw, 72px);
+    height: clamp(58px, 10vw, 72px);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #dff9e9;
+    color: #176c36;
+    font-size: clamp(28px, 4vw, 35px);
+    margin-bottom: clamp(16px, 3vw, 20px);
+}
+
+.paymentSuccess h3 {
+    margin: 0;
+    font-size: clamp(18px, 4vw, 24px);
+    font-weight: 700;
+    color: #0b5727;
+}
+
+.successMessage {
+    margin: clamp(20px, 4vw, 32px) 0;
+    color: #a56a88;
+    line-height: 1.9;
+    font-size: clamp(11px, 2.5vw, 15px);
+}
+
+.paidAmount {
+    width: min(100%, 360px);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(10px, 2.5vw, 16px) clamp(11px, 3vw, 20px);
+    border-radius: clamp(14px, 2.5vw, 18px);
+    background: #fff7fac8;
+    border: 1px solid #f3dce4;
+    box-shadow: 0 6px 18px #9c2d5814;
+}
+
+.paidAmount svg {
+    font-size: clamp(23px, 4vw, 30px);
+    flex-shrink: 0;
+    color: #d37197;
+}
+
+
+.amountInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-right: 12px;
+}
+
+.amountInfo span {
+    color: #c53d71bd;
+    font-size: clamp(11px, 1.5vw, 13px);
+}
+
+.amountInfo strong {
+    color: #de4681;
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.redirectMessage {
+    margin-top: clamp(20px, 4vw, 32px);
+    font-size: clamp(11px, 1.5vw, 13px);
+    color: #a56a88;
+}
+
+.continueButton {
+    min-width: clamp(90px, 30vw, 120px);
+    min-height: 42px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: clamp(4px, 1vw, 7px);
+    padding: 10px clamp(16px, 3vw, 24px);
+    border: none;
+    border-radius: clamp(11px, 2vw, 14px);
+    background: linear-gradient(135deg, #ec4899, #db2777);
+    color: white;
+    font: inherit;
+    font-size: clamp(13px, 1.5vw, 14px);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px #ec48994d;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.continueButton svg {
+    font-size: clamp(17px, 2vw, 19px);
+}
+
+.continueButton:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+    box-shadow: 0 8px 18px rgba(201, 79, 125, 0.24);
+}
+
+/* error mode */
+
+.paymentError {
+    width: min(100%, 400px);
+    min-height: clamp(380px, 60vw, 450px);
+    margin: clamp(20px, 4vw, 55px) auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: clamp(14px, 3vw, 18px);
+    padding: clamp(20px, 5vw, 40px);
+    background: #fff7f8;
+    border: 1px solid #f8f1f4;
+}
+
+.errorIcon {
+    width: clamp(58px, 10vw, 75px);
+    height: clamp(58px, 10vw, 75px);
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    margin-bottom: clamp(14px, 3vw, 20px);
+    border: 1px solid #fde5e6;
+    background: #fbdfdf;
+    border-radius: 50%;
+    color: #c9414e;
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 600;
+}
+
+.paymentError h3 {
+    color: #c5394e;
+    font-size: clamp(17px, 3.5vw, 24px);
+}
+
+.errorMessage {
+    margin: clamp(18px, 4vw, 32px) 0 0;
+    color: #b43355;
+    line-height: 1.9;
+    font-size: clamp(11px, 2.5vw, 15px);
+    overflow-wrap: anywhere;
+}
+
+.retryButton {
+    max-width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+    margin-top: clamp(20px, 4vw, 40px);
+    padding: 10px clamp(16px, 4vw, 24px);
+    border-radius: 8px;
+    border: 1px solid #fce5ee;
+    background: #800f05;
+    color: #fff;
+    font: inherit;
+    font-size: clamp(13px, 1.5vw, 15px);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.retryButton:hover {
+    background: #d51c0c;
+    transform: scale(1.02) translateY(-2px);
+}
+
+@media (max-width: 700px) {
+    .topSection {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .paymentHeader h2 {
+        flex-direction: column;
+        line-height: 1.6;
+    }
+
+    .paymentDetails>h3 {
+        flex-direction: column;
+    }
+
+    .payButton svg {
+        display: none;
+    }
+
+}
