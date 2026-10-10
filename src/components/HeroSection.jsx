@@ -18,7 +18,8 @@ const HeroSection = () => {
                     <h1>زیبایی دستان شما، هنر ماست</h1>
                     <p>رزرو آنلاین خدمات ناخن</p>
                     <div className={Styles.heroButton}>
-                        <Link to='/reservation' className={Styles.reserveBut}>
+                        <Link to="/booking" className={Styles.reserveBut}>
+
                             رزرو نوبت
                             <CiCalendar size={22} />
                         </Link >

@@ -1,7 +1,7 @@
 .heroContent {
     position: relative;
     width: 100%;
-    height: clamp(450px, 70vh, 750px);
+    height: clamp(450px, 80dvh, 800px);
     overflow: hidden;
 }
 

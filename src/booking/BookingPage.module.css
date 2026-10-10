@@ -1,0 +1,51 @@
+.bookingPage {
+    position: relative;
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(25px, 5vw, 40px) clamp(12px, 3vw, 20px) clamp(50px, 7vw, 70px);
+    overflow: hidden;
+    direction: rtl;
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 246, 249, 0.9) 30%,
+            transparent 65%),
+        linear-gradient(135deg,
+            #fff8fa 0%,
+            #fff0f4 50%,
+            #ffe5ed 100%);
+}
+
+.bookingCard {
+    position: relative;
+    width: min(100%, 999px);
+    margin-top: clamp(20px, 4vw, 35px);
+    padding: clamp(25px, 4vw, 42px) clamp(15px, 3.5vw, 34px) clamp(25px, 4vw, 35px);
+    border: 1px solid #f07ea04d;
+    border-radius: clamp(18px, 3vw, 28px);
+    background: rgba(250, 234, 240, 0.72);
+    box-shadow:
+        0 25px 60px rgba(190, 90, 125, 0.12),
+        0 5px 20px rgba(190, 90, 125, 0.06);
+
+    backdrop-filter: blur(15px);
+}
+
+.stepContent {
+    width: 100%;
+}
+
+.bookingPage::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('/src/assets/images/leaf2.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    z-index: 0;
+    pointer-events: none;
+}

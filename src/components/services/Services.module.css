@@ -1,0 +1,485 @@
+.serviceContainer {
+    position: relative;
+    width: 100%;
+    padding: 80px 5%;
+    background: #fff7f8;
+    overflow: hidden;
+}
+
+.serviceContainer>*:not(.bubble):not(.ring):not(.glow) {
+    position: relative;
+    z-index: 1;
+}
+
+.serviceContainer>.bubble,
+.serviceContainer>.glow,
+.serviceContainer>.ring {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.bubble {
+    display: block;
+    border-radius: 50%;
+}
+
+.bubble1 {
+    width: clamp(65px, 15vw, 210px);
+    height: clamp(65px, 15vw, 210px);
+    top: -5%;
+    left: -3%;
+    background:
+        radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 38%),
+        radial-gradient(circle, rgba(230, 140, 158, 0.22), rgba(230, 140, 158, 0.10) 100%);
+}
+
+.bubble2 {
+    width: clamp(25px, 4vw, 55px);
+    height: clamp(25px, 4vw, 55px);
+    top: 3%;
+    left: 24%;
+    background: rgba(230, 163, 171, 0.22);
+}
+
+.bubble3 {
+    width: clamp(65px, 11vw, 150px);
+    height: clamp(65px, 11vw, 150px);
+    top: -8%;
+    right: 22%;
+    background: rgba(230, 163, 171, 0.18);
+}
+
+.bubble4 {
+    width: clamp(55px, 10vw, 145px);
+    height: clamp(55px, 10vw, 145px);
+    top: 5%;
+    right: -2.5%;
+    background: rgba(230, 163, 171, 0.18);
+}
+
+.bubble5 {
+    width: clamp(25px, 2.8vw, 32px);
+    height: clamp(25px, 2.8vw, 32px);
+    top: 18%;
+    left: 18%;
+    background: rgba(230, 163, 171, 0.18);
+}
+
+.bubble6 {
+    width: 20px;
+    height: 20px;
+    top: 22%;
+    right: 32%;
+    background:
+        radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 38%),
+        radial-gradient(circle, rgba(230, 140, 158, 0.26), rgba(230, 140, 158, 0.13) 100%);
+}
+
+.bubble7 {
+    width: clamp(35px, 4vw, 50px);
+    height: clamp(35px, 4vw, 50px);
+    top: 45%;
+    left: 5%;
+    background: rgba(230, 163, 171, 0.20);
+}
+
+.bubble8 {
+    width: clamp(30px, 3.2vw, 40px);
+    height: clamp(30px, 3.2vw, 40px);
+    bottom: 25%;
+    left: 10%;
+    background: rgba(230, 163, 171, 0.17);
+}
+
+.bubble9 {
+    width: clamp(130px, 15vw, 220px);
+    height: clamp(120px, 15vw, 220px);
+    bottom: -7%;
+    right: -3%;
+    background: rgba(230, 163, 171, 0.15);
+}
+
+.bubble10 {
+    width: clamp(35px, 4vw, 50px);
+    height: clamp(35px, 4vw, 50px);
+    top: 15%;
+    right: 20%;
+    background: rgba(230, 163, 171, 0.18);
+}
+
+.bubble11 {
+    width: clamp(15px, 3vw, 42px);
+    height: clamp(15px, 3vw, 42px);
+    top: 65%;
+    right: 4%;
+    background: rgba(230, 163, 171, 0.16);
+}
+
+.bubble12 {
+    width: clamp(20px, 2.5vw, 26px);
+    height: clamp(20px, 2.5vw, 26px);
+    bottom: 15%;
+    right: 8%;
+    background:
+        radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 40%),
+        radial-gradient(circle, rgba(230, 140, 158, 0.24), rgba(230, 140, 158, 0.12) 100%);
+}
+
+.bubble13 {
+    width: clamp(16px, 1.8vw, 20px);
+    height: clamp(16px, 1.8vw, 20px);
+    top: 35%;
+    left: 3%;
+    background:
+        radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 40%),
+        radial-gradient(circle, rgba(230, 140, 158, 0.24), rgba(230, 140, 158, 0.12) 100%);
+}
+
+.bubble14 {
+    width: clamp(12px, 2.2vw, 30px);
+    height: clamp(12px, 2.2vw, 30px);
+    top: 13%;
+    left: 35%;
+    background:
+        radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 40%),
+        radial-gradient(circle, rgba(230, 140, 158, 0.24), rgba(230, 140, 158, 0.12) 100%);
+}
+
+.ring {
+    display: block;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.ring1 {
+    width: clamp(35px, 3.9vw, 55px);
+    height: clamp(35px, 3.9vw, 55px);
+    top: 8%;
+    right: 15%;
+    border: 2px solid rgba(230, 163, 171, 0.30);
+}
+
+.ring2 {
+    width: clamp(40px, 5.4vw, 75px);
+    height: clamp(40px, 5.4vw, 75px);
+    top: 43%;
+    right: 7%;
+    border: 2px solid rgba(230, 163, 171, 0.25);
+}
+
+.ring3 {
+    width: clamp(45px, 6vw, 85px);
+    height: clamp(45px, 6vw, 85px);
+    top: 55%;
+    left: -3%;
+    border: 2px solid rgba(230, 163, 171, 0.22);
+}
+
+.ring4 {
+    width: clamp(26px, 3.6vw, 50px);
+    height: clamp(26px, 3.6vw, 50px);
+    top: 15%;
+    left: 8%;
+    border: 2px solid rgba(230, 163, 171, 0.20);
+}
+
+.glow {
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.glow1 {
+    width: 260px;
+    height: 260px;
+    top: 45%;
+    right: 7%;
+    background: radial-gradient(circle, rgba(234, 139, 157, 0.55), transparent 70%);
+}
+
+.glow2 {
+    width: 220px;
+    height: 220px;
+    bottom: 7%;
+    left: -4%;
+    background: radial-gradient(circle, rgba(197, 110, 138, 0.45), transparent 70%);
+}
+
+.glow3 {
+    width: 300px;
+    height: 300px;
+    top: 2%;
+    left: 40%;
+    background: radial-gradient(circle, rgba(219, 134, 161, 0.45), transparent 70%);
+}
+
+.headTitle {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 1.5vw, 15px);
+    margin-bottom: clamp(25px, 6vw, 50px);
+}
+
+.headTitle h3 {
+    margin: 0;
+    color: #9b230b;
+    font-size: clamp(13px, 1.1vw, 17px);
+    font-weight: 600;
+    letter-spacing: clamp(2px, .25vw, 4px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(15px, 2vw, 30px);
+}
+
+.headTitle h3::before,
+.headTitle h3::after {
+    content: "";
+    display: block;
+    width: clamp(40px, 8vw, 110px);
+    height: 2px;
+    flex-shrink: 0;
+}
+
+.headTitle h3::before {
+    background: linear-gradient(to right,
+            transparent 0%,
+            #e6a0ad 40%,
+            #c56e8a 100%);
+}
+
+.headTitle h3::after {
+    background: linear-gradient(to left,
+            transparent 0%,
+            #e6a0ad 40%,
+            #c56e8a 100%);
+}
+
+
+.headTitle h1 {
+    font-size: clamp(20px, 2.5vw, 40px);
+}
+
+.headTitle h1,
+p {
+    color: #790941;
+}
+
+.headTitle p {
+    font-size: clamp(12px, 2vw, 20px);
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 3vw, 45px);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.moreServices {
+    display: flex;
+    justify-content: center;
+    margin-block: 50px;
+}
+
+.moreBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 28px;
+    border: 1px solid #d99aaa;
+    border-radius: 50px;
+    color: #b95b74;
+    background: rgba(241, 180, 180, 0.1);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.35s ease;
+}
+
+.moreBtn:hover {
+    background: #fbc4d371;
+    transform: translateY(-4px);
+    box-shadow:
+        0 8px 20px rgba(143, 18, 59, 0.13);
+}
+
+.moreBtn svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+@media (max-width: 1100px) {
+
+    .serviceContainer {
+        padding-inline: 30px;
+    }
+
+    .card {
+        height: 320px;
+    }
+
+    .bubble13 {
+        left: 1%;
+    }
+
+    .glow1 {
+        width: 230px;
+        height: 230px;
+    }
+
+    .glow2 {
+        width: 190px;
+        height: 190px;
+    }
+
+    .glow3 {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+
+@media (max-width: 760px) {
+
+    .serviceContainer {
+        padding: 60px 20px;
+    }
+
+    .cardGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: 300px;
+    }
+
+    .cardImage {
+        width: 55%;
+    }
+
+    .cardInfo {
+        width: 60%;
+    }
+
+    .bubble1 {
+        top: -2%;
+        left: -7%;
+    }
+
+    .bubble2 {
+        left: 25%;
+    }
+
+    .bubble3 {
+        top: -6%;
+    }
+
+    .bubble4 {
+        right: -5%;
+    }
+
+    .bubble5 {
+        top: 6%;
+        left: 10%;
+    }
+
+    .bubble9 {
+        right: -5%;
+        bottom: -5%;
+    }
+
+    .bubble11 {
+        top: 8%;
+        right: 20%;
+    }
+
+    .bubble14 {
+        top: 8%;
+    }
+
+    .ring1 {
+        top: 5%;
+    }
+
+    .ring3 {
+        left: -7%;
+    }
+
+    .ring4 {
+        left: 15%;
+        top: 8%;
+    }
+
+    .glow1 {
+        width: 170px;
+        height: 170px;
+        right: -5%;
+        filter: blur(35px);
+    }
+
+    .glow2 {
+        width: 150px;
+        height: 150px;
+        left: -8%;
+        filter: blur(35px);
+    }
+
+    .glow3 {
+        width: 180px;
+        height: 180px;
+        left: 25%;
+        top: 4%;
+        filter: blur(35px);
+    }
+}
+
+@media (max-width: 400px) {
+
+    .serviceContainer {
+        padding-inline: 15px;
+    }
+
+    .card {
+        height: 260px;
+    }
+
+    .cardImage {
+        width: 52%;
+    }
+
+    .cardInfo {
+        width: 62%;
+    }
+
+    .bubble2 {
+        left: 25%;
+    }
+
+    .bubble3 {
+        top: -4%;
+    }
+
+    .bubble9,
+    .bubble14 {
+        display: none;
+    }
+
+    .bubble11 {
+        top: 8%;
+        right: 20%;
+    }
+
+    .ring {
+        display: none;
+    }
+
+    .glow {
+        opacity: .5;
+    }
+}
