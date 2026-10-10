@@ -39,7 +39,8 @@ const Footer = () => {
                             <li> <Link to="/portfolio"> نمونه کار ها </Link> </li>
                             <li> <Link to="/services"> خدمات </Link> </li>
                             <li>
-                                <Link className={Styles.reservation} to="/reservation">
+                                <Link className={Styles.reservation} to='/booking'>
+
                                     رزرو نوبت
                                     <CiCalendar size={25} />
                                 </Link>
