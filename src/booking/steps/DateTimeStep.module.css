@@ -1,0 +1,569 @@
+.dateTimeStep {
+    width: 100%;
+}
+
+.dateHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: clamp(40px, 7vw, 70px);
+}
+
+.dateIcon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5d5e0;
+    color: #d9698e;
+    border-radius: 50%;
+}
+
+.dateHeader h3 {
+    margin: 0;
+    color: #5f0f29;
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 700;
+}
+
+.dateHeader p {
+    margin: 8px 0 0;
+    color: #777177;
+    font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.calendarSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.calenderWrapper {
+    width: 100%;
+    max-width: 500px;
+    margin-block: clamp(20px, 4vw, 30px);
+    padding: clamp(18px, 3vw, 28px) clamp(12px, 2.5vw, 24px) clamp(14px, 2vw, 20px);
+    background: #fdf1f5;
+    border: 2px solid #f5d9e6;
+    border-radius: clamp(22px, 4vw, 30px);
+}
+
+.pinkCalendar {
+    width: 100% !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    font-family: inherit !important;
+}
+
+.pinkCalendar :global(.rmdp-wrapper) {
+    display: block;
+    width: 100% !important;
+}
+
+.pinkCalendar :global(.rmdp-calendar) {
+    width: 100% !important;
+    padding: 0;
+}
+
+.pinkCalendar :global(.rmdp-day-picker) {
+    width: 100% !important;
+}
+
+.pinkCalendar :global(.rmdp-day-picker > div) {
+    width: 100% !important;
+}
+
+.pinkCalendar :global(.rmdp-week) {
+    width: 100% !important;
+}
+
+
+.pinkCalendar :global(.rmdp-header) {
+    width: 100%;
+    padding: 0 0 clamp(12px, 2vw, 18px);
+    margin-bottom: clamp(12px, 2vw, 16px);
+    border-bottom: 1px solid #f2d5e2;
+}
+
+.pinkCalendar :global(.rmdp-header-values) {
+    color: #9e1c53;
+    font-size: clamp(17px, 2.2vw, 22px);
+    font-weight: 700;
+}
+
+.pinkCalendar :global(.rmdp-arrow-container) {
+    width: clamp(38px, 5vw, 50px);
+    height: clamp(38px, 5vw, 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fbdcea;
+    border-radius: clamp(13px, 2vw, 16px);
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.pinkCalendar :global(.rmdp-arrow-container:hover) {
+    background: #f28dbe;
+    box-shadow: none;
+    transform: scale(1.04);
+}
+
+.pinkCalendar :global(.rmdp-arrow) {
+    border-color: #c32162;
+}
+
+.pinkCalendar :global(.rmdp-day-picker > div > div:first-child) {
+    width: 100%;
+    background: #edcada;
+    border-radius: 14px;
+    margin-bottom: clamp(10px, 2vw, 14px);
+    padding: clamp(10px, 2vw, 14px) 8px;
+}
+
+.pinkCalendar :global(.rmdp-week) {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+}
+
+.pinkCalendar :global(.rmdp-week-day) {
+    flex: 1 1 0;
+    width: 14.2857%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #5c1f38;
+    font-size: clamp(9px, 1.3vw, 14px);
+    white-space: nowrap;
+    font-weight: 700;
+    text-align: center;
+}
+
+.pinkCalendar :global(.rmdp-day) {
+    flex: 1 1 0;
+    width: 14.2857%;
+    height: clamp(46px, 5vw, 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 3px;
+}
+
+.pinkCalendar :global(.rmdp-day span) {
+    width: clamp(36px, 5vw, 50px);
+    height: clamp(36px, 5vw, 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: #fff;
+    color: #3a2c33;
+    border-radius: clamp(10px, 2vw, 14px);
+    font-size: clamp(12px, 1.5vw, 15px);
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pinkCalendar :global(.rmdp-day:not(.rmdp-disabled):not(.rmdp-selected) span:hover) {
+    background: #f9c1d7;
+    transform: translateY(-1px);
+}
+
+.pinkCalendar :global(.rmdp-day.rmdp-disabled span) {
+    background: #e0d7dc;
+    color: #a9969f;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.pinkCalendar :global(.rmdp-day.rmdp-today span) {
+    background: #fbc9db;
+    color: #c2185b;
+    border: 2px solid #f6a8cf;
+    font-weight: 700;
+    box-shadow: none;
+}
+
+.pinkCalendar :global(.rmdp-day.rmdp-selected span) {
+    background: linear-gradient(135deg, #ec4899, #c2185b) !important;
+    color: #fff !important;
+    border: none;
+    box-shadow: 0 8px 18px #ec489966;
+}
+
+
+.pinkCalendar :global(.rmdp-day.rmdp-today.rmdp-selected span) {
+    background: linear-gradient(135deg, #ec4899, #c2185b) !important;
+    color: #fff !important;
+    border: none;
+}
+
+/* Time Section */
+.timeSection {
+    width: 100%;
+    max-width: 480px;
+    margin: clamp(24px, 4vw, 30px) auto clamp(30px, 5vw, 40px);
+    border-top: 2px solid rgba(224, 87, 135, 0.1);
+    padding-top: clamp(18px, 3vw, 25px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(20px, 4vw, 30px);
+}
+
+.timeSection h3 {
+    color: #5f0f29;
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 700;
+    text-align: center;
+}
+
+.timeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(10px, 2vw, 20px);
+}
+
+.timeButton {
+    min-height: clamp(46px, 5vw, 50px);
+    border: 1px solid #f5bdd3;
+    border-radius: clamp(11px, 2vw, 14px);
+    background: #ffffff;
+    color: #7c2b45;
+    font-family: inherit;
+    font-size: clamp(10px, 3vw, 14px);
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.timeButton:hover {
+    border-color: #f2387b;
+    background: #fff5f8;
+    color: #f2387b;
+}
+
+.timeButton:active {
+    transform: scale(0.97);
+}
+
+.selectedTime {
+    border-color: #f2387b;
+    background: linear-gradient(135deg, #f2387b, #e92f72);
+    color: #fff;
+    box-shadow: 0 8px 18px #f2387b33;
+}
+
+.selectedTime:hover {
+    background: linear-gradient(135deg, #f2387b, #e92f72);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.full {
+    opacity: 0.4;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.selectedDateTime {
+    width: min(100% - 32px, 700px);
+    margin: clamp(45px, 7vw, 75px) auto 0;
+    margin-top: 75px;
+    padding: clamp(14px, 2.5vw, 18px) clamp(16px, 3vw, 22px);
+    border: 1px solid #f5cddd;
+    border-radius: clamp(15px, 2.5vw, 18px);
+    background: linear-gradient(135deg, #fff8fb, #fff0f6);
+    animation: selectedDateTimeIn 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.selectedHeader {
+    display: flex;
+    align-items: center;
+    gap: clamp(7px, 1.5vw, 10px);
+    margin-bottom: clamp(14px, 2.5vw, 18px);
+    color: #d82d76;
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.successIcon {
+    width: clamp(25px, 4vw, 28px);
+    height: clamp(25px, 4vw, 28px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e8327e;
+    color: #fff;
+    font-size: clamp(12px, 1.5vw, 14px);
+    font-weight: bold;
+}
+
+.selectedInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(10px, 2vw, 15px);
+}
+
+.selectedItem {
+    display: flex;
+    align-items: center;
+    gap: clamp(9px, 2vw, 15px);
+    padding: clamp(10px, 2vw, 12px) clamp(11px, 2vw, 14px);
+    border-radius: clamp(11px, 2vw, 13px);
+    background: #ffffffbf;
+}
+
+.infoIcon svg {
+    width: clamp(21px, 3vw, 25px);
+    height: clamp(21px, 3vw, 25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+.selectedItem div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.selectedItem small {
+    font-size: clamp(9px, 1.2vw, 11px);
+    color: #9c8993;
+}
+
+.selectedItem strong {
+    font-size: clamp(12px, 1.5vw, 14px);
+    color: #45333d;
+}
+
+@keyframes selectedDateTimeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.97);
+        filter: blur(3px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-2px) scale(1.005);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.validationError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem auto 0;
+    padding: 0.65rem 1rem;
+    color: #8f2944;
+        animation: errorReveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.errorDecoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 25rem);
+    gap: 0.75rem;
+}
+
+.errorLine {
+    width: 20rem;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #f0235a73);
+}
+
+.errorLine:last-child {
+    background: linear-gradient(to left, transparent, #f0235a73);
+}
+
+.errorIcon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    font-size: 2rem;
+    color: #c31c59;
+     animation: errorIconReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.errorText {
+    margin-top: .8rem;
+    color: #8f2929;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+@keyframes errorReveal {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes errorIconReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: clamp(10px, 7vw, 70px);
+    margin-top: clamp(24px, 4vw, 35px);
+    padding-top: clamp(18px, 3vw, 25px);
+    border-top: 1px solid #f4e2e9;
+}
+
+.backButton,
+.nextButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    gap: clamp(5px, 1vw, 8px);
+    padding: clamp(11px, 1.5vw, 15px) clamp(16px, 2.5vw, 24px);
+    border-radius: clamp(12px, 2vw, 16px);
+    font-size: clamp(13px, 1.5vw, 15px);
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.backButton {
+    border: 1.5px solid #f6c6db;
+    background: #fff;
+    color: #c92d6e;
+}
+
+.backButton:hover {
+    background: #f5e1e9;
+    border-color: #f9c3de;
+    color: #ec4899;
+}
+
+.backButton span,
+.nextButton span {
+    display: flex;
+    align-items: center;
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+.nextButton {
+    background: linear-gradient(135deg, #ec4899, #db2777);
+    color: #fff;
+    box-shadow: 0 8px 20px #ec48994d;
+}
+
+.nextButton:hover:not(:disabled) {
+    box-shadow: 0 10px 24px #ec489966;
+    transform: translateY(-1px);
+}
+
+.nextButton:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.nextButton:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+@media (max-width: 600px) {
+    .timeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .selectedInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        margin-inline: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .calenderWrapper {
+        padding-inline: 4px;
+    }
+
+    .pinkCalendar :global(.rmdp-week-day) {
+        font-size: 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .pinkCalendar :global(.rmdp-day) {
+        height: 44px;
+        padding: 2px;
+    }
+
+    .pinkCalendar :global(.rmdp-day span) {
+        width: 29px;
+        height: 29px;
+        border-radius: 9px;
+        font-size: 10px;
+    }
+
+    .timeGrid {
+        gap: 8px;
+    }
+
+    .actions {
+        margin-inline: 0;
+    }
+     .backButton,
+    .nextButton {
+        padding-inline: 11px;
+    }
+
+    .backButton span,
+    .nextButton span {
+        font-size: 16px;
+    }
+}
