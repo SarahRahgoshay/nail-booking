@@ -12,7 +12,7 @@ const Header = () => {
     const menuList = [
         {to: "/" , label: "صفحه اصلی" , end: true},
         {to: "/services" , label: "خدمات"},
-        {to: "/portfolio" , label: "نمونه کارها"},
+        {to: "/portfolios" , label: "نمونه کارها"},
         {to: "/contact-us" , label: "تماس با ما"},
     ];
 

@@ -1,5 +1,5 @@
 import Styles from './ServiceStep.module.css';
-import { services } from '../../mockData';
+import { services } from '../../mockData/mockData';
 import { MdOutlineTimer, MdOutlineError  } from "react-icons/md";
 import { GiFingernail } from "react-icons/gi";
 

@@ -1,0 +1,312 @@
+.portfolio {
+    width: 100%;
+    padding: clamp(40px, 6vw, 80px) clamp(16px, 4vw, 48px);
+    background: #fff7f8;
+}
+
+.portfolioHeader {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: clamp(8px, 1.5vw, 15px);
+}
+
+.portfolioHeader h3 {
+    margin: 0 0 12px;
+    color: #9b230b;;
+    font-size: clamp(0.82rem, 1.5vw, 1.1rem);
+    letter-spacing: clamp(2px, .25vw, 4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(15px, 2vw, 30px);
+}
+
+.portfolioHeader h3::before,
+.portfolioHeader h3::after {
+    content: "";
+    display: block;
+    width: clamp(40px, 8vw, 110px);
+    height: 2px;
+    flex-shrink: 0;
+}
+
+.portfolioHeader h3::before {
+    background: linear-gradient(to right,
+            transparent 0%,
+            #e6a0ad 40%,
+            #c56e8a 100%);
+}
+
+.portfolioHeader h3::after {
+    background: linear-gradient(to left,
+            transparent 0%,
+            #e6a0ad 40%,
+            #c56e8a 100%);
+}
+
+.portfolioHeader h1 , p {
+    color: #790941;
+}
+
+.portfolioHeader h1 {
+    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.portfolioHeader p {
+    margin: 0;
+    font-size: clamp(0.70rem, 2vw, 1.1rem);
+}
+
+.portfolioSlider {
+    width: 100%;
+    max-width: 80%;
+    padding: 35px 12px 65px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolioSlider :global(.swiper-slide) {
+    height: auto;
+    overflow: hidden;
+    border-radius: 18px;
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease;
+}
+
+.portfolioSlider :global(.swiper-slide:not(.swiper-slide-active)) {
+    opacity: 0.7;
+}
+
+.portfolioSlider :global(.swiper-slide-active) {
+    z-index: 2;
+    opacity: 1;
+}
+
+.portfolioSlider :global(.swiper-button-prev),
+.portfolioSlider :global(.swiper-button-next) {
+    width: clamp(24px, 8vw, 40px);
+    height: clamp(24px, 8vw, 40px);
+    border-radius: 50%;
+    color: #fff;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.portfolioSlider :global(.swiper-button-prev)::after,
+.portfolioSlider :global(.swiper-button-next)::after {
+    font-size: clamp(10px, 2.8vw, 14px);
+    font-weight: 700;
+}
+
+.portfolioSlider :global(.swiper-button-prev):hover,
+.portfolioSlider :global(.swiper-button-next):hover {
+    color: #c07a94;
+    transform: scale(1.06);
+}
+
+.atEnd :global(.swiper-button-next) {
+    display: none;
+}
+
+.portfolioSlider :global(.swiper-pagination) {
+    position: absolute;
+    bottom: 12px !important;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.portfolioSlider :global(.swiper-pagination-bullet) {
+    width: clamp(5px, 1.5vw, 8px);
+    height: clamp(5px, 1.5vw, 8px);
+    margin: 0 !important;
+    border-radius: 10px;
+    background: #d9a0b5 !important;
+    opacity: 0.7;
+    transition:
+        width 0.3s ease,
+        background-color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.portfolioSlider :global(.swiper-pagination-bullet-active) {
+    width: clamp(10px, 3vw, 18px);
+    background: #c94f7d !important;
+    opacity: 1;
+}
+
+
+.viewAllSlide {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    box-sizing: border-box;
+    padding: clamp(18px, 3vw, 28px);
+    overflow: hidden;
+    border: 1px solid #c94f7d47;
+    border-radius: 18px;
+    background:
+        radial-gradient(circle at 90% 10%,
+            #eebecf59,
+            transparent 38%),
+        linear-gradient(145deg, #fffaf9, #fceaf0);
+    color: #5f0f29;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgb(95 15 41 / 6%);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.decorativeCircle,
+.decorativeRing {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.decorativeCircle {
+    top: -35px;
+    right: -30px;
+    width: clamp(75px, 2vw, 110px);
+    height: clamp(75px, 2vw, 110px);
+    background: rgb(201 79 125 / 7%);
+}
+
+.decorativeRing {
+    bottom: -45px;
+    left: -35px;
+    width: clamp(80px, 10vw, 125px);
+    height: clamp(80px, 10vw, 125px);
+    border: 1px solid rgb(201 79 125 / 18%);
+}
+
+.galleryIcon {
+    display: grid;
+    place-items: center;
+    width: clamp(35px, 6vw, 58px);
+    height: clamp(35px, 6vw, 58px);
+    border: 1px solid rgb(201 79 125 / 28%);
+    border-radius: 50%;
+    background: rgb(255 255 255 / 65%);
+    color: #b3577a;
+}
+
+.galleryIcon svg {
+    width: clamp(18px, 4vw, 30px);
+    height: clamp(18px, 4vw, 30px);
+}
+
+.viewAllEyebrow {
+    color: #b66a87;
+    font-size: clamp(0.5rem, 2vw, 0.7rem);
+    letter-spacing: 0.2em;
+    font-weight: 600;
+}
+
+.viewAllSlide h3 {
+    margin: 0;
+    color: #8a3a5a;
+    font-size: clamp(0.75rem, 1.5vw, 1.2rem);
+    font-weight: 600;
+    line-height: 1.9;
+}
+
+.viewAllDescription {
+    color: #936879;
+    font-size: clamp(0.55rem, 1.5vw, 0.76rem);
+    line-height: 1.8;
+}
+
+.viewAllArrow {
+    display: grid;
+    place-items: center;
+    width: clamp(20px, 9vw, 34px);
+    height: clamp(20px, 9vw, 34px);
+    margin-top: 3px;
+    border: 1px solid rgb(201 79 125 / 35%);
+    border-radius: 50%;
+    color: #c94f7d;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+@media (hover: hover) {
+    .viewAllSlide:hover {
+        transform: translateY(-3px);
+        border-color: rgb(201 79 125 / 50%);
+        box-shadow: 0 12px 28px rgb(95 15 41 / 11%);
+    }
+
+    .viewAllSlide:hover .viewAllArrow {
+        background: #c94f7d;
+        color: #fff;
+        transform: translateX(-3px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .viewAllSlide,
+    .viewAllArrow {
+        transition: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .portfolioSlider {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 280px) {
+    .viewAllSlide {
+        gap: 12px;
+        padding: 10px 5px;
+        min-height: 0;
+        aspect-ratio: 4 / 5;
+    }
+
+    .galleryIcon,
+    .viewAllEyebrow,
+    .viewAllDescription,
+    .decorativeCircle,
+    .decorativeRing {
+        display: none;
+    }
+
+    .viewAllSlide h3 {
+        font-size: 0.60rem;
+    }
+
+    .viewAllArrow {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        margin-top: 0;
+    }
+    .viewAllArrow svg {
+        font-size: 10px;
+    }
+}

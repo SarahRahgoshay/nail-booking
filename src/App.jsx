@@ -5,6 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 import ServicesPage from './pages/ServicesPage';
 import ScrollToTop from './components/ScrollToTop';
 import BookingPage from './booking/BookingPage'
+import Portfolio from './components/portfolio/Portfolio';
+import PortfolioPage from './pages/portfolio/PortfolioPage';
 
 
 function App() {
@@ -20,12 +22,14 @@ function App() {
               <>
                 <HeroSection />
                 <Services />
+                <Portfolio />
               </>
             } />
             <Route path="/services" element={<ServicesPage />} />
             {/* reservation */}
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/booking/:servicesId" element={<BookingPage />} />
+            <Route path='/portfolios' element={<PortfolioPage />} />
         </Routes>
       </Layout>
     </>
