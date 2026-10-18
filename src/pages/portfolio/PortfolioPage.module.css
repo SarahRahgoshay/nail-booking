@@ -1,0 +1,126 @@
+.PortfolioPage {
+    width: 100%;
+    min-height: 100dvh;
+    background: #fff7f8;
+    padding: clamp(40px, 6vw, 80px) clamp(16px, 4vw, 48px);
+}
+
+.portfolioHeader {
+    margin: 0 auto clamp(28px, 4vw, 42px);
+    text-align: center;
+}
+
+.portfolioHeader h1 {
+    margin: 0 0 12px;
+    color: #5f0f29;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.portfolioHeader p {
+    margin: 0;
+    color: #795363;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    line-height: 1.9;
+}
+
+.categoryFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.categoryButton,
+.activeCategory {
+    padding: 9px clamp(14px, 2.5vw, 24px);
+    border: 1px solid #c94f7d40;
+    border-radius: 999px;
+    background: #ffffffbf;
+    color: #795363;
+    font: inherit;
+    font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+    line-height: 1.7;
+    cursor: pointer;
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.activeCategory {
+    border-color: #5f0f29;
+    background: #5f0f29;
+    color: #fff;
+    box-shadow: 0 4px 12px rgb(95 15 41 / 15%);
+}
+
+@media (hover: hover) {
+    .categoryButton:hover {
+        border-color: #c94f7d;
+        background: #fceaf0;
+        color: #5f0f29;
+    }
+
+    .activeCategory:hover {
+        background: #7b2344;
+    }
+}
+
+.portfolioGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(14px, 2vw, 24px);
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+    align-items: start;
+}
+
+
+@media (max-width: 1000px) {
+    .portfolioGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .portfolioGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .categoryFilters {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 300px) {
+    .portfolioPage {
+        padding-inline: 12px;
+    }
+
+    .portfolioGrid {
+        gap: 10px;
+    }
+
+    .imageOverlay {
+        display: none;
+    }
+
+    .categoryButton,
+    .activeCategory {
+        padding: 7px 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .categoryButton,
+    .activeCategory {
+        transition: none;
+    }
+}
