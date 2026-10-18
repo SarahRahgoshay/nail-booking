@@ -1,5 +1,5 @@
 import Styles from './Services.module.css';
-import { services } from '../../mockData';
+import { services } from '../../mockData/mockData';
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import ServiceCard from './ServiceCard';

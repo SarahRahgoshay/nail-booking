@@ -1,4 +1,4 @@
-import { mockUser } from "../mockData";
+import { mockUser } from "../mockData/mockData";
 
 export const getCurrentUser = () => {
     if (!mockUser.isAuthenticated) {

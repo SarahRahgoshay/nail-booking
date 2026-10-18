@@ -1,5 +1,5 @@
 import Styles from './ServicesPage.module.css';
-import { services } from '../mockData';
+import { services } from '../mockData/mockData';
 import ServiceCard from '../components/services/ServiceCard';
 
 const ServicesPage = () => {

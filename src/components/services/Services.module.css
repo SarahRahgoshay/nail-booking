@@ -246,16 +246,16 @@
 
 .headTitle h3::before {
     background: linear-gradient(to right,
-            transparent 0%,
-            #e6a0ad 40%,
-            #c56e8a 100%);
+        transparent 0%,
+        #e6a0ad 40%,
+        #c56e8a 100%);
 }
 
 .headTitle h3::after {
     background: linear-gradient(to left,
-            transparent 0%,
-            #e6a0ad 40%,
-            #c56e8a 100%);
+        transparent 0%,
+        #e6a0ad 40%,
+        #c56e8a 100%);
 }
 
 
@@ -269,7 +269,7 @@ p {
 }
 
 .headTitle p {
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: clamp(0.70rem, 2vw, 1.1rem);
 }
 
 .cardGrid {
