@@ -11,19 +11,20 @@
     gap: clamp(8px, 1.5vw, 15px);
 }
 
-.portfolioHeader h3 {
-    margin: 0 0 12px;
-    color: #9b230b;;
-    font-size: clamp(0.82rem, 1.5vw, 1.1rem);
-    letter-spacing: clamp(2px, .25vw, 4px);
+.portfolioHeader span {
+    display: inline-block;
+    color: #ad4e71;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: clamp(15px, 2vw, 30px);
 }
 
-.portfolioHeader h3::before,
-.portfolioHeader h3::after {
+.portfolioHeader span::before,
+.portfolioHeader span::after {
     content: "";
     display: block;
     width: clamp(40px, 8vw, 110px);
@@ -31,31 +32,32 @@
     flex-shrink: 0;
 }
 
-.portfolioHeader h3::before {
+.portfolioHeader span::before {
     background: linear-gradient(to right,
             transparent 0%,
             #e6a0ad 40%,
             #c56e8a 100%);
 }
 
-.portfolioHeader h3::after {
+.portfolioHeader span::after {
     background: linear-gradient(to left,
             transparent 0%,
             #e6a0ad 40%,
             #c56e8a 100%);
 }
 
-.portfolioHeader h1 , p {
-    color: #790941;
-}
-
-.portfolioHeader h1 {
-    font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+.portfolioHeader h2 {
+    color: #7a2847e2;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 800;
+    line-height: 1.7;
 }
 
 .portfolioHeader p {
+    color: #9a5574;
     margin: 0;
-    font-size: clamp(0.70rem, 2vw, 1.1rem);
+    font-size: clamp(0.88rem, 1.4vw, 1rem);
+    line-height: 2.1;
 }
 
 .portfolioSlider {
@@ -306,6 +308,7 @@
         flex-shrink: 0;
         margin-top: 0;
     }
+
     .viewAllArrow svg {
         font-size: 10px;
     }

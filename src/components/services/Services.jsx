@@ -27,8 +27,8 @@ const Services = () => {
             )}
 
             <div className={Styles.headTitle}>
-                <h3>SERVICES </h3>
-                <h1> خدمات ما </h1>
+                <span>SERVICES </span>
+                <h2> خدمات ما </h2>
                 <p> با بهترین متریال و ظریف ترین طراحی </p>
             </div>
             <div className={Styles.cardGrid}>

@@ -21,8 +21,8 @@ const Portfolio = () => {
     return (
         <section className={Styles.portfolio}>
             <div className={Styles.portfolioHeader}>
-                <h3> PORTFOLIOS </h3>
-                <h1> نمونه کارهای من </h1>
+                <span> PORTFOLIOS </span>
+                <h2> نمونه کارهای من </h2>
                 <p> نگاهی به تعدادی از طراحی ها و خدمات ناخن </p>
             </div>
 
