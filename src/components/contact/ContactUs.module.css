@@ -1,0 +1,346 @@
+.contact {
+  --wine-light: #79364f;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(90px, 7vw, 130px) clamp(16px, 3vw, 30px);
+
+  background-color: #faf7f5;
+  background-image:
+    linear-gradient(180deg,
+      rgba(250, 247, 245, 0.28) 0%,
+      rgba(250, 247, 245, 0.20) 35%,
+      rgba(250, 247, 245, 0.28) 70%,
+      rgba(250, 247, 245, 0.48) 100%),
+    url('../../assets/images/contact-us.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+
+  height: clamp(180px, 28vw, 400px);
+  background: linear-gradient(to bottom,
+      #fff7f8 0%,
+      rgba(255, 247, 248, 0.96) 10%,
+      rgba(255, 247, 248, 0.82) 25%,
+      rgba(255, 247, 248, 0.55) 45%,
+      rgba(255, 247, 248, 0.25) 70%,
+      transparent 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: clamp(160px, 24vw, 340px);
+  background: linear-gradient(to top,
+      #fff7f8 0%,
+      rgba(255, 247, 248, 0.96) 10%,
+      rgba(255, 247, 248, 0.82) 25%,
+      rgba(255, 247, 248, 0.55) 45%,
+      rgba(255, 247, 248, 0.25) 70%,
+      transparent 100%);
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.contactHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(10px, 0.9vw, 15px);
+  margin-bottom: clamp(35px, 4vw, 60px);
+}
+
+.eyebrow {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(15px, 2vw, 30px);
+  color: #ad4e71;
+  font-size: clamp(0.68rem, 1vw, 0.78rem);
+  font-weight: 600;
+  letter-spacing: clamp(2px, 0.3vw, 4px);
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  display: block;
+  width: clamp(40px, 8vw, 110px);
+  height: 2px;
+  flex-shrink: 0;
+}
+
+.eyebrow::before {
+  background: linear-gradient(to right,
+      transparent 0%,
+      #e6a0ad 40%,
+      #c56e8a 100%);
+}
+
+.eyebrow::after {
+  background: linear-gradient(to left,
+      transparent 0%,
+      #e6a0ad 40%,
+      #c56e8a 100%);
+}
+
+.title {
+  color: #7a2847e2;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+.subtitle {
+  max-width: 780px;
+  margin: clamp(6px, 1vw, 14px) auto 0;
+
+  color: #9a5574;
+  font-size: clamp(0.84rem, 1.2vw, 1rem);
+  line-height: 2.1;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.6vw, 20px);
+  align-items: stretch;
+}
+
+.contactCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: clamp(320px, 25vw, 360px);
+  padding: clamp(18px, 2vw, 25px) clamp(14px, 1.8vw, 22px) clamp(18px, 1.8vw, 22px);
+  background: #fbf9f9cd;
+  border: 1px solid #ffeeeee6;
+  border-radius: clamp(14px, 1.4vw, 17px);
+  box-shadow: 0 8px 30px #57162f0b;
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease,
+    border-color 250ms ease;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(18px, 2vw, 24px);
+}
+
+.iconWrapper {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: clamp(45px, 4vw, 58px);
+  height: clamp(45px, 4vw, 58px);
+  color: #d63a76;
+  background: #ffd4e17f;
+  border-radius: 50%;
+  font-size: clamp(1.3rem, 1.5vw, 1.65rem);
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    transform 250ms ease;
+}
+
+/* Card Content */
+
+.cardContent {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContent h3 {
+  margin: 0 0 clamp(6px, 0.8vw, 10px);
+  color: #8c0e34f9;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  font-weight: 750;
+  line-height: 1.9;
+}
+
+.description {
+  min-height: 52px;
+  margin: 0 0 clamp(12px, 1.4vw, 17px);
+  color: #a15e7ee7;
+  font-size: clamp(0.75rem, 0.9vw, 0.84rem);
+  line-height: 2;
+}
+
+.cardInfo {
+  padding-top: clamp(12px, 1.2vw, 15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid rgba(87, 22, 47, 0.09);
+}
+
+.value {
+  margin: 0;
+  color: #5d203e;
+  font-size: clamp(0.78rem, 0.9vw, 0.88rem);
+  font-weight: 650;
+  line-height: 2.1;
+  overflow-wrap: anywhere;
+}
+
+.detail {
+  margin: 4px 0 0;
+  color: var(--wine-light);
+  font-size: clamp(0.76rem, 0.9vw, 0.85rem);
+  font-weight: 600;
+  line-height: 2;
+}
+
+/* Card Link */
+
+.linkText {
+  margin: 0 0 8px;
+  color: #b597a5;
+  font-size: clamp(0.75rem, 0.9vw, 0.82rem);
+  line-height: 1.8;
+}
+
+.valueLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(6px, 0.8vw, 10px);
+  width: 100%;
+  box-sizing: border-box;
+  padding: clamp(9px, 1vw, 12px) clamp(10px, 1.2vw, 14px);
+  color: #761e3f;
+  background: #f7e7ecfc;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 200ms ease, border-color 200ms ease;
+}
+
+.valueLink .value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.valueLink svg {
+  flex-shrink: 0;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  color: #79364f;
+  transition: transform 200ms ease, color 200ms ease;
+}
+
+.dontShow::before,
+.dontShow::after {
+  display: none;
+}
+
+.dontShow .eyebrow::before,
+.dontShow .eyebrow::after {
+  display: none;
+}
+/* Hover */
+
+@media (hover: hover) {
+  .contactCard:hover {
+    transform: translateY(-6px);
+    border-color: #57162f33;
+    box-shadow: 0 18px 38px #57162f1f;
+  }
+
+  .contactCard:hover .iconWrapper {
+    color: #fff;
+    background: #fa88b3;
+    transform: scale(1.05);
+  }
+
+  .valueLink:hover svg {
+    color: #57162f;
+    transform: scale(1.08);
+  }
+}
+
+@media (max-width: 1024px) {
+  .contactGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contactCard {
+    min-height: clamp(300px, 36vw, 340px);
+  }
+
+  .description {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+ .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .contactCard {
+    min-height: clamp(285px, 78vw, 320px);
+    padding: 17px clamp(10px, 3.5vw, 14px);
+    border-radius: 14px;
+  }
+
+  .cardTop {
+    margin-bottom: 18px;
+  }
+
+  .cardContent h3 {
+    line-height: 1.8;
+  }
+
+  .description {
+    margin-bottom: 13px;
+    line-height: 1.9;
+  }
+
+  .valueLink {
+    border-radius: 8px;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .contactCard,
+  .iconWrapper,
+  .valueLink,
+  .valueLink svg {
+    transition: none;
+  }
+}
