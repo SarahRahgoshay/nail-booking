@@ -36,11 +36,10 @@ const Footer = () => {
                     <div className={Styles.links}>
                         <h2>دسترسی سریع</h2>
                         <ul>
-                            <li> <Link to="/portfolio"> نمونه کار ها </Link> </li>
+                            <li> <Link to="/portfolios"> نمونه کار ها </Link> </li>
                             <li> <Link to="/services"> خدمات </Link> </li>
                             <li>
                                 <Link className={Styles.reservation} to='/booking'>
-
                                     رزرو نوبت
                                     <CiCalendar size={25} />
                                 </Link>

@@ -7,6 +7,8 @@ import ScrollToTop from './components/ScrollToTop';
 import BookingPage from './booking/BookingPage'
 import Portfolio from './components/portfolio/Portfolio';
 import PortfolioPage from './pages/portfolio/PortfolioPage';
+import ContactUs from './components/contact/ContactUs';
+import ContactPage from './pages/contact/ContactPage';
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
                 <HeroSection />
                 <Services />
                 <Portfolio />
+                <ContactUs />
               </>
             } />
             <Route path="/services" element={<ServicesPage />} />
@@ -30,6 +33,7 @@ function App() {
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/booking/:servicesId" element={<BookingPage />} />
             <Route path='/portfolios' element={<PortfolioPage />} />
+            <Route path='//contact-us' element={<ContactPage />}/>
         </Routes>
       </Layout>
     </>
