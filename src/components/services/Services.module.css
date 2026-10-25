@@ -218,25 +218,23 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: clamp(8px, 1.5vw, 15px);
     margin-bottom: clamp(25px, 6vw, 50px);
 }
 
-.headTitle h3 {
+.headTitle span {
     margin: 0;
-    color: #9b230b;
-    font-size: clamp(13px, 1.1vw, 17px);
+    color: #ad4e71;
+    font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: clamp(2px, .25vw, 4px);
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: clamp(15px, 2vw, 30px);
 }
 
-.headTitle h3::before,
-.headTitle h3::after {
+.headTitle span::before,
+.headTitle span::after {
     content: "";
     display: block;
     width: clamp(40px, 8vw, 110px);
@@ -244,32 +242,33 @@
     flex-shrink: 0;
 }
 
-.headTitle h3::before {
+.headTitle span::before {
     background: linear-gradient(to right,
-        transparent 0%,
-        #e6a0ad 40%,
-        #c56e8a 100%);
+            transparent 0%,
+            #e6a0ad 40%,
+            #c56e8a 100%);
 }
 
-.headTitle h3::after {
+.headTitle span::after {
     background: linear-gradient(to left,
-        transparent 0%,
-        #e6a0ad 40%,
-        #c56e8a 100%);
+            transparent 0%,
+            #e6a0ad 40%,
+            #c56e8a 100%);
 }
 
 
-.headTitle h1 {
-    font-size: clamp(20px, 2.5vw, 40px);
-}
-
-.headTitle h1,
-p {
-    color: #790941;
+.headTitle h2 {
+    color: #7a2847e2;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 800;
+    line-height: 1.7;
 }
 
 .headTitle p {
-    font-size: clamp(0.70rem, 2vw, 1.1rem);
+    margin: 14px auto 0;
+    color: #9a5574;
+    font-size: clamp(0.88rem, 1.4vw, 1rem);
+    line-height: 2.1;
 }
 
 .cardGrid {
