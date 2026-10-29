@@ -1,15 +1,16 @@
 import Footer from "./Footer";
 import Header from "./Header";
 import Styles from './Footer.module.css';
+import { Outlet } from "react-router-dom";
 
 
-const Layout = ({children}) => {
+const Layout = () => {
 
     return (
         <>
             <Header />
             <main className="padding-top">
-             {children}
+                <Outlet />
             </main>
             <Footer /> 
         </>

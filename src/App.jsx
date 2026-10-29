@@ -9,15 +9,16 @@ import Portfolio from './components/portfolio/Portfolio';
 import PortfolioPage from './pages/portfolio/PortfolioPage';
 import ContactUs from './components/contact/ContactUs';
 import ContactPage from './pages/contact/ContactPage';
+import NotFound from './pages/NotFound';
 
 
 function App() {
 
   return (
     <>
-      <Layout>
-        <ScrollToTop />
-        <Routes>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
           <Route
             path='/'
             element={
@@ -28,14 +29,15 @@ function App() {
                 <ContactUs />
               </>
             } />
-            <Route path="/services" element={<ServicesPage />} />
-            {/* reservation */}
-            <Route path="/booking" element={<BookingPage />} />
-            <Route path="/booking/:servicesId" element={<BookingPage />} />
-            <Route path='/portfolios' element={<PortfolioPage />} />
-            <Route path='//contact-us' element={<ContactPage />}/>
-        </Routes>
-      </Layout>
+          <Route path="/services" element={<ServicesPage />} />
+          {/* reservation */}
+          <Route path="/booking" element={<BookingPage />} />
+          <Route path="/booking/:servicesId" element={<BookingPage />} />
+          <Route path='/portfolios' element={<PortfolioPage />} />
+          <Route path='/contact-us' element={<ContactPage />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   )
 }
