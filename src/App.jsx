@@ -10,6 +10,7 @@ import PortfolioPage from './pages/portfolio/PortfolioPage';
 import ContactUs from './components/contact/ContactUs';
 import ContactPage from './pages/contact/ContactPage';
 import NotFound from './pages/NotFound';
+import MyAppointmentPage from './pages/MyAppointmentPage';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/booking/:servicesId" element={<BookingPage />} />
           <Route path='/portfolios' element={<PortfolioPage />} />
           <Route path='/contact-us' element={<ContactPage />} />
+          <Route path='/my-appointments' element={<MyAppointmentPage />}></Route>
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -14,6 +14,7 @@ const Header = () => {
         {to: "/services" , label: "خدمات"},
         {to: "/portfolios" , label: "نمونه کارها"},
         {to: "/contact-us" , label: "تماس با ما"},
+        {to: "/my-appointments" , label: "نوبت های من" , special: true},
     ];
 
     const navClass = ({ isActive }) => isActive ? Styles.activeLink : "";
@@ -52,7 +53,9 @@ const Header = () => {
                         {menuList.map((menuItem) => 
                             <li key={menuItem.to}>
                                 <NavLink 
-                                    className={navClass} 
+                                    className={
+                                        ({isActive}) => `${navClass({isActive})} ${menuItem.special ? Styles.appointmentsLink : ""}`
+                                    } 
                                     to={menuItem.to} 
                                     end={menuItem.end}
                                     onClick={() => setIsOpen(false)}>

@@ -66,6 +66,47 @@
   transform: scaleX(1);
 }
 
+.appointmentsLink {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 9px 18px;
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(87, 22, 47, 0.18);
+
+    font-size: clamp(17px, 1.3vw, 20px) !important;
+    font-weight: 600;
+
+    /* box-shadow: 0 3px 12px rgba(87, 22, 47, 0.07); */
+
+    transition: all 0.3s ease;
+}
+
+.appointmentsLink::after {
+    display: none;
+}
+
+.appointmentsLink:hover {
+    background: #d37d9e;
+    color: #fff !important;
+    border-color: #b76c89;
+    transform: translateY(-2px);
+}
+
+.appointmentsLink.activeLink {
+    background: #57162f;
+    color: #fff !important;
+    border-color: #57162f;
+}
+
+.appointmentsLink.activeLink::after {
+    display: none;
+}
+
 
 .logo img {
     width: clamp(110px, 8vw, 150px);
