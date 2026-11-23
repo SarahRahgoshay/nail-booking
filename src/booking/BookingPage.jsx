@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { getCurrentUser } from '../auth/Auth';
 import Styles from './BookingPage.module.css';
 import StepIndicator from './StepIndicator';
@@ -9,6 +9,7 @@ import PaymentStep from './steps/PaymentStep';
 import { bookingReducer, initialBookingState } from './BookingReducer';
 import { validateStep } from './bookingValidation';
 import ConfirmStep from './steps/ConfirmStep';
+import { services } from '../mockData/mockData';
 
 
 const mockPayment = () => {
@@ -29,10 +30,33 @@ const BookingPage = () => {
     const [validationError, setValidationerror] = useState(null);
     const navigate = useNavigate()
 
-    const stepNames = ["service", "dateTime", "payment", "confirm"];
+    const steps = [
+        { key: "service", label: "انتخاب سرویس" },
+        { key: "dateTime", label: "انتخاب تاریخ و زمان" },
+        { key: "payment", label: "پرداخت بیعانه" },
+        { key: "confirmation", label: "تایید نهایی نوبت" },
+
+    ]
+
+    const { servicesId } = useParams();
 
     useEffect(() => {
-        window.scrollTo(0 , 0)
+        if (!servicesId) return;
+
+        const selectedService = services.find(
+            service => service.id === Number(servicesId)
+        );
+
+        if (selectedService) {
+            dispatch({
+                type: "SET_SERVICE",
+                payload: selectedService
+            });
+        }
+    }, [servicesId]);
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
     }, [currentStep]);
 
 
@@ -41,7 +65,7 @@ const BookingPage = () => {
     }
 
     const handleNext = () => {
-        const step = stepNames[currentStep]
+        const step = steps[currentStep].key;
         const validation = validateStep(step, bookingState);
 
         if (!validation.isValid) {
@@ -94,16 +118,9 @@ const BookingPage = () => {
         }
     };
 
-    const steps = [
-        { key: "service", label: "انتخاب سرویس" },
-        { key: "dateTime", label: "انتخاب تاریخ و زمان" },
-        { key: "payment", label: "پرداخت بیعانه" },
-        { key: "confirmation", label: "تایید نهایی نوبت" },
 
-    ]
     return (
         <div className={Styles.bookingPage}>
-
             <div className={Styles.bookingCard}>
                 <StepIndicator
                     steps={steps}

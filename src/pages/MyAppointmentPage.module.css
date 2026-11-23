@@ -1,0 +1,182 @@
+.pageBackground {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(255, 247, 248, 0.82),
+            rgba(255, 247, 248, 0.82)),
+        url("../assets/images/reserve.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.appointmentPage {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3vw, 28px);
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: clamp(24px, 4vw, 40px) clamp(14px, 2vw, 20px) clamp(40px, 5vw, 64px);
+    color: #462837;
+}
+
+.appointmentHeader h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+    color: #57162f;
+}
+
+.appointmentHeader p {
+    margin: 0;
+    color: #8c6978;
+    font-size: clamp(0.82rem, 1.5vw, 0.95rem);
+    line-height: 1.8;
+}
+
+.tabs {
+    display: inline-flex;
+    gap: 4px;
+    align-self: flex-start;
+    margin: 0;
+    padding: clamp(5px, 0.8vw, 8px);
+    border-radius: 999px;
+    background: #ffffffd9;
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: clamp(8px, 1vw, 10px) clamp(13px, 2vw, 22px);
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #57162f;
+    font: inherit;
+    font-weight: 700;
+    font-size: clamp(0.78rem, 1.2vw, 0.9rem);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.tab[aria-pressed="true"] {
+    background: #57162f;
+    color: #fff;
+}
+
+.count {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    min-width: clamp(21px, 2vw, 25px);
+    height: clamp(21px, 2vw, 25px);
+    border-radius: 50%;
+    background: #ffe2ec;
+    color: #57162f;
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
+}
+
+.tab[aria-pressed="true"] .count {
+    background: #fff;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 240px;
+    padding: 32px 20px;
+    background: #fff;
+    border: 1px solid rgba(121, 54, 79, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(87, 22, 47, 0.05);
+    text-align: center;
+}
+
+.emptyIcon {
+    display: grid;
+    place-items: center;
+    width: clamp(64px, 10vw, 76px);
+    height: clamp(64px, 10vw, 76px);
+    border-radius: 50%;
+    background: #fff0f5;
+    color: #79364f;
+    font-size: clamp(1.7rem, 4vw, 2rem);
+    margin-bottom: 6px;
+}
+
+
+.empty h3 {
+    margin: 0;
+    color: #57162f;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    font-weight: 700;
+}
+
+.empty p {
+    max-width: 420px;
+    margin: 0;
+    color: #8c6978;
+    font-size: clamp(0.82rem, 1.5vw, 0.92rem);
+    line-height: 2;
+}
+
+.emptyButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    padding: 11px 28px;
+    border-radius: 999px;
+    background: #57162f;
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(0.82rem, 1.5vw, 0.9rem);
+    font-weight: 700;
+    transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.emptyButton:hover {
+    background: #79364f;
+    transform: translateY(-2px);
+}
+
+
+.sectionTitle {
+    margin: 0;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #57162f;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 1.5vw, 15px);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list li {
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    .appointmentPage {
+        gap: 22px;
+    }
+
+    .appointmentHeader h2 {
+        margin-bottom: 6px;
+    }
+}

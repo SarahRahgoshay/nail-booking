@@ -1,0 +1,251 @@
+.row {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1.4fr) 1fr 1fr auto auto;
+    align-items: center;
+    gap: clamp(14px, 4vw, 32px);
+    padding: clamp(14px, 1.5vw, 16px) clamp(14px, 2vw, 20px);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 6px 16px #8f3a5c1f;
+    min-width: 0;
+}
+
+.dateBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 64px;
+    aspect-ratio: 1;
+    background: #ffeef4;
+    color: #57162f;
+    border-radius: 14px;
+}
+
+.dateBox strong {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    line-height: 1.2;
+}
+
+.dateBox span {
+    font-size: clamp(0.65rem, 2vw, 0.72rem);
+    color: #8c6978;
+}
+
+.service {
+    width: fit-content;
+}
+
+.service h3 {
+    margin: 0 0 4px;
+    font-size: clamp(0.85rem, 3.5vw, 1.2rem);
+    color: #57162f;
+}
+
+.service p {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+    color: #8c6978;
+}
+
+.amount {
+    min-width: 0;
+}
+
+.amount>div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.amount span {
+    font-size: clamp(0.68rem, 2vw, 0.72rem);
+    color: #8c6978;
+}
+
+.amount strong {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+}
+
+.status {
+    width: fit-content;
+    border-radius: 999px;
+    font-size: clamp(0.62rem, 2.2vw, 0.78rem);
+    padding: clamp(5px, 1.5vw, 6px) clamp(8px, 2vw, 14px);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status[data-status="confirmed"] {
+    background: #e2f5ee;
+    color: #268060;
+}
+
+.status[data-status="completed"] {
+    background: #f0e9f7;
+    color: #6e508c;
+}
+
+.status[data-status="cancelled"] {
+    background: #fdebee;
+    color: #b8424f;
+}
+
+.cancel,
+.rebook {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: clamp(105px, 9vw, 130px);
+    padding: 10px clamp(12px, 1.5vw, 20px);
+    border-radius: 999px;
+    font: inherit;
+    font-size: clamp(0.75rem, 1.1vw, 0.88rem);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.cancel {
+    border: 1.5px solid #b8424f;
+    background: transparent;
+    color: #b8424f;
+}
+
+.cancel:hover {
+    background: #fdebee;
+}
+
+.rebook {
+    border: 0;
+    background: #ffecf3;
+    color: #57162f;
+}
+
+.rebook:hover {
+    background: #ffdce9;
+}
+
+@media (max-width: 900px) {
+    .row {
+        grid-template-columns: 64px minmax(120px, 1.2fr) minmax(150px, 200px) 1fr auto auto;
+        column-gap: 18px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .row {
+        grid-template-columns: 56px minmax(0, 1fr) auto;
+        gap: 12px;
+    }
+
+    .dateBox {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .service {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .status {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .amount {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: center;
+    }
+
+    .action {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+
+    .cancel,
+    .rebook {
+        width: 100%;
+    }
+}
+
+@media(max-width: 400px) {
+    .amount {
+        display: none;
+    }
+}
+
+@media (max-width: 200px) {
+    .row {
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px;
+        min-width: 0;
+    }
+
+    .dateBox {
+        grid-column: 1;
+        grid-row: 2;
+        width: 44px;
+        height: 48px;
+        padding: 3px;
+    }
+
+    .dateBox strong {
+        font-size: 0.9rem;
+    }
+
+    .dateBox span {
+        font-size: 0.55rem;
+    }
+
+    .service {
+        grid-column: 2;
+        grid-row: 2;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .service h3 {
+        font-size: 0.75rem;
+        overflow-wrap: anywhere;
+    }
+
+    .service p {
+        font-size: 0.6rem;
+    }
+
+    .status {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: center;
+        font-size: 0.6rem;
+        padding: 4px 8px;
+    }
+
+    .action {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        min-width: 0;
+    }
+
+    .cancel,
+    .rebook {
+        width: 100%;
+        min-width: 0;
+        padding: 8px 5px;
+        font-size: 0.7rem;
+        white-space: normal;
+    }
+}
